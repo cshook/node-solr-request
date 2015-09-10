@@ -17,7 +17,7 @@
   "author": "Craig Shook <cshook58@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cshook/node-solrRequest/issues"
+    "url": "https://github.com/cshook/node-solr-request/issues"
   },
-  "homepage": "https://github.com/cshook/node-solrRequest#readme"
+  "homepage": "https://github.com/cshook/node-solr-request#readme"
 }
