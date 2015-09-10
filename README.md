@@ -5,7 +5,7 @@ A lightweight node.js Solr client
 
 The following sample uses Express
 
-'''
+```
 var solrRequest = require('node-solr-request');
 var express     = require('express');
 var bodyParser  = require('body-parser');
@@ -53,7 +53,7 @@ app.use('/solr-api', router);
 
 app.listen(port);
 console.log('Listening on port ' + port);
-'''
+```
 
 #### example URLS
 [SERVER NAME]/solr-api/solrQuery => will return all documents based on your solr defaults
