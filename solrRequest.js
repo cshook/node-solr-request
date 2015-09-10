@@ -61,8 +61,8 @@ objDocument.prototype = {
 	},
 
 	getDocuments:function (strQuery, queryParams, responseHandler) {
-		filterArray = (typeof queryParams.filters !== 'undefined') ? queryParams.filters: [];
-		paramsArray = (typeof queryParams.params !== 'undefined') ? queryParams.params: [];
+		filterArray = (typeof queryParams.filters == 'undefined' || isEmpty(queryParams.filters)) ? []: JSON.parse(queryParams.filters);
+		paramsArray = (typeof queryParams.params == 'undefined' || isEmpty(queryParams.params)) ? []: JSON.parse(queryParams.params);
 		var arrFilters = [];
 		var arrParams = [];
 		var strQueryString = (typeof strQuery != 'undefined' && strQuery != '') ? '?q=' + strQuery : '?q=*';

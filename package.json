@@ -1,0 +1,23 @@
+{
+  "name": "node-solr-request",
+  "version": "0.1.0",
+  "description": "Lightweight solr client for CRUD operations",
+  "main": "solrRequest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://cshook@github.com/cshook/node-solrRequest.git"
+  },
+  "keywords": [
+    "solr",
+    "crud"
+  ],
+  "author": "Craig Shook <cshook58@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cshook/node-solrRequest/issues"
+  },
+  "homepage": "https://github.com/cshook/node-solrRequest#readme"
+}
