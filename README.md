@@ -57,6 +57,7 @@ console.log('Listening on port ' + port);
 
 #### example URLS
 |URL|RESULT|
+|---------------------------------|------------------------------------------------------|
 |[SERVER NAME]/solr-api/solrQuery | will return all documents based on your solr defaults|
 |[SERVER NAME]/solr-api/solrQuery?filters={"field-name":"filter_value","field-name2":"filter_value"} | will return all documents based on your solr defaults and filters specified|
 |[SERVER NAME]/solr-api/solrQuery?params={"rows":5,"start":10} | will return 5 documents starting with the 10th document|
