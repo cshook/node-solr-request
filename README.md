@@ -56,10 +56,11 @@ console.log('Listening on port ' + port);
 ```
 
 #### example URLS
-[SERVER NAME]/solr-api/solrQuery => will return all documents based on your solr defaults
-[SERVER NAME]/solr-api/solrQuery?filters={"field-name":"filter_value","field-name2":"filter_value"} => will return all documents based on your solr defaults and filters specified
-[SERVER NAME]/solr-api/solrQuery?params={"rows":5,"start":10} => will return 5 documents starting with the 10th document
-[SERVER NAME]/solr-api/solrQuery?filters={"field-name":"filter_value","field-name2":"filter_value"}&params={"rows":5} => will return maximum 5 documents based on your filters specified
-[SERVER NAME]/solr-api/solrQuery/widget => will search for the string "widgets" and return all found documents based on your solr defaults
-[SERVER NAME]/solr-api/solrQuery/widget?filters={"field-name":"filter_value","field-name2":"filter_value"}&params={"rows":5} => will search for the string "widgets" and return maximum 5 found documents based on your filters specified
+|URL|RESULT|
+|[SERVER NAME]/solr-api/solrQuery | will return all documents based on your solr defaults|
+|[SERVER NAME]/solr-api/solrQuery?filters={"field-name":"filter_value","field-name2":"filter_value"} | will return all documents based on your solr defaults and filters specified|
+|[SERVER NAME]/solr-api/solrQuery?params={"rows":5,"start":10} | will return 5 documents starting with the 10th document|
+|[SERVER NAME]/solr-api/solrQuery?filters={"field-name":"filter_value","field-name2":"filter_value"}&params={"rows":5} | will return maximum 5 documents based on your filters specified|
+|[SERVER NAME]/solr-api/solrQuery/widget | will search for the string "widgets" and return all found documents based on your solr defaults|
+|[SERVER NAME]/solr-api/solrQuery/widget?filters={"field-name":"filter_value","field-name2":"filter_value"}&params={"rows":5} | will search for the string "widgets" and return maximum 5 found documents based on your filters specified|
 
