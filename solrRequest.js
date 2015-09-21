@@ -60,7 +60,7 @@ objDocument.prototype = {
 		var result = objResult.deletById(docID);
 	},
 
-	getDocuments:function (strQuery, queryParams, responseHandler) {
+	buildQuery:function (strQuery, queryParams) {
 		filterArray = (typeof queryParams.filters == 'undefined' || isEmpty(queryParams.filters)) ? []: JSON.parse(queryParams.filters);
 		paramsArray = (typeof queryParams.params == 'undefined' || isEmpty(queryParams.params)) ? []: JSON.parse(queryParams.params);
 		var arrFilters = [];
@@ -90,8 +90,25 @@ objDocument.prototype = {
 		strQuery = (strFilters == '') ? strQueryString : strQueryString.concat('&', strFilters) ;
 		strQuery = strQuery.concat('&wt=json');
 		strQuery = (strParams == '') ? strQuery : strQuery.concat('&', strParams) ;
+		return strQuery;
+	},
+
+	getDocuments:function (strQuery, queryParams, responseHandler) {
+		strQuery = this.buildQuery(strQuery, queryParams);
 		var objResult = new solrConnect(this.settings, responseHandler);
 		var result = objResult.getData(strQuery);
+	},
+
+	getDataWtihFacets:function (strQuery, queryParams, responseHandler) {
+		strQuery = this.buildQuery(strQuery, queryParams);
+		var objResult = new solrConnect(this.settings, responseHandler);
+		var result = objResult.getDataFacets(strQuery);
+	},
+
+	getFacets:function (strQuery, queryParams, responseHandler) {
+		strQuery = this.buildQuery(strQuery, queryParams);
+		var objResult = new solrConnect(this.settings, responseHandler);
+		var result = objResult.getFacets(strQuery);
 	}
 }
 
